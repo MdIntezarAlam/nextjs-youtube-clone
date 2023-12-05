@@ -8,7 +8,7 @@ interface ITypes {
 }
 export default function MiddleCard1({ items }: ITypes) {
   return (
-    <div className="w-full min-h-44 rounded-lg flex flex-col items-center gap-y-2 bg-secondary text-primary-foreground hover:bg-primary/50">
+    <div className="w-full min-h-44 rounded-lg flex flex-col items-center gap-y-2 bg-secondary text-primary-foreground hover:bg-border">
       <div className="w-full h-[60%]">
         <Image
           src={items.img_poster}
