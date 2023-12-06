@@ -4,7 +4,7 @@ export const videoCardData = [
     id: 0,
     img_poster: "/assets/m_1.png",
     userImg: "/assets/m_u1.png",
-    title1: " A paragraph is a series of sentences that are organized",
+    title1: "A paragraph is a series of sentences that are Alam123",
     title2: "Lorem ipsum dolor sit amet.",
     title3: "43M views . 2 years ago",
   },

@@ -30,7 +30,7 @@ export default function MiddleCard1({ items }: ITypes) {
         </div>
 
         <div className="w-11/12 px-2 text-xs text-secondary-foreground">
-          <h1 className="text-sm text-justify font-semibold text-primary-foreground">
+          <h1 className="text-sm text-left font-semibold text-primary-foreground">
             {items.title1}
           </h1>
           <h5>{items.title2}</h5>
