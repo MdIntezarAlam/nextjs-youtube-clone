@@ -6,7 +6,7 @@ export default function AppScrollbar() {
       {scrollablebtn.map((items) => (
         <button
           key={items.id}
-          className="px-4 py-2 text-xs bg-secondary border border-border rounded-full text-primary-foreground hover:bg-border cursor-pointer"
+          className="px-4 py-2 text-xs font-semibold bg-secondary border border-border rounded-full text-primary-foreground hover:bg-border cursor-pointer"
         >
           {items.title}
         </button>
