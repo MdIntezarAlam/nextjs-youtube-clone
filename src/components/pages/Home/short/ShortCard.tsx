@@ -6,7 +6,7 @@ import { type TypesThumbnal } from "@/@Types/TypesThumbnal";
 interface ITypes {
   items: TypesThumbnal;
 }
-export default function MiddleShortCard({ items }: ITypes) {
+export default function ShortCard({ items }: ITypes) {
   return (
     <div className="w-full min-h-56 rounded-lg flex flex-col items-center gap-y-2 bg-secondary text-primary-foreground hover:bg-border">
       <div className="w-full h-[80%]">

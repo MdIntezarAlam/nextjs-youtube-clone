@@ -1,15 +1,15 @@
 import React from "react";
 
-import RightSidebar from "@/components/pages/rightsidebar/RightSidebar";
+import Home from "@/components/pages/Home";
 import Sidebar from "@/components/pages/sidebar/Sidebar";
 
-export default function index() {
+export default function MainPage() {
   return (
     <div className="flex h-screen bg-primary">
-      <div className="w-full flex overflow-hidden">
+      <main className="w-full flex overflow-hidden">
         <Sidebar />
-        <RightSidebar />
-      </div>
+        <Home />
+      </main>
     </div>
   );
 }

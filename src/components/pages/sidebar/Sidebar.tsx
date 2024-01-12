@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BiLike, BiSolidMoviePlay } from "react-icons/bi";
 import { CiFlag1 } from "react-icons/ci";
@@ -36,10 +37,10 @@ const TopCard = () => {
   return (
     <div className="flex items-center gap-x-4 p-2 mb-5 cursor-pointer z-10">
       <IoMenu className="text-2xl" />
-      <div className="flex items-center gap-x-1">
+      <Link href={"/"} className="flex items-center gap-x-1">
         <IoLogoYoutube className="text-destructive text-2xl " />
         <h1>YouTube</h1>
-      </div>
+      </Link>
     </div>
   );
 };
@@ -47,13 +48,14 @@ const CardOne = () => {
   return (
     <>
       {cardData1.map((item) => (
-        <div
+        <Link
           key={item.id}
+          href={item.path}
           className="flex items-center gap-x-5 px-3 mx-2 py-2 hover:bg-border rounded-lg hover:bg-opacity-100 cursor-pointer"
         >
           {item.icons}
           <h1 className="text-sm font-normal">{item.title}</h1>
-        </div>
+        </Link>
       ))}
     </>
   );
@@ -161,7 +163,6 @@ const CopyRightCard = ({ Title1, Title2, Title3 }: any) => {
       <h1>{Title1}</h1>
       <h1>{Title2}</h1>
       <h3 className="text-[11px] font-normal">{Title3}</h3>
-      <div className="mb-2"></div>
     </div>
   );
 };
@@ -194,11 +195,28 @@ export default function Sidebar() {
 }
 
 const cardData1 = [
-  { id: 0, icons: <IoMdHome className="text-xl" />, title: "Home" },
-  { id: 1, icons: <MdExplore className="text-xl" />, title: "Explore" },
-  { id: 2, icons: <SiYoutubeshorts className="text-xl" />, title: "Shorts" },
+  {
+    id: 0,
+    path: "/",
+    icons: <IoMdHome className="text-xl" />,
+    title: "Home",
+  },
+  {
+    id: 1,
+    path: "/",
+    icons: <MdExplore className="text-xl" />,
+    title: "Explore",
+  },
+  {
+    id: 2,
+    path: "/short",
+    icons: <SiYoutubeshorts className="text-xl" />,
+    title: "Shorts",
+  },
   {
     id: 3,
+
+    path: "/",
     icons: <MdSubscriptions className="text-xl" />,
     title: "Subscriptions",
   },

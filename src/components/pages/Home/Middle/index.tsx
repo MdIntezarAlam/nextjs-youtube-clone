@@ -3,6 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { SiYoutubeshorts } from "react-icons/si";
 
 import { type TypesThumbnal } from "@/@Types/TypesThumbnal";
+import CustomText from "@/components/common/CustomText";
 import {
   brekingNewsdData,
   infinityData,
@@ -10,46 +11,40 @@ import {
   videoCardData,
 } from "@/data";
 
-import MiddleCard1 from "./MiddleCard1";
-import MiddleShortCard from "./MiddleShortCard";
+import ShortCard from "../short/ShortCard";
+import MiddleCard from "./MiddleCard1";
 
-export default function Middlebar() {
+export default function Middle() {
   return (
-    <main className="flex-1 p-4 bg-primary text-primary-foreground overflow-y-auto flex flex-col gap-y-4">
+    <main className="flex-1 p-4 bg-primary text-primary-foreground overflow-y-auto flex flex-col gap-y-4 section">
       <div className="w-full grid grid-rows-2 grid-cols-4 gap-x-2 gap-y-5 cursor-pointer">
         {videoCardData.map((items: TypesThumbnal) => (
-          <MiddleCard1 key={items.id} items={items} />
+          <MiddleCard key={items.id} items={items} />
         ))}
       </div>
 
       {/* short */}
-      <div className="w-full flex items-center justify-between py-5">
-        <div className="flex items-center gap-x-2">
-          <SiYoutubeshorts className="text-destructive text-xl" />
-          <h1 className="text-xl">Short</h1>
-        </div>
-        <IoClose className="text-2xl" />
-      </div>
-
+      <CustomText
+        Text1={"Short"}
+        Text2={""}
+        lIcon={<SiYoutubeshorts className="text-destructive text-xl" />}
+        RIcon={<IoClose className="text-2xl" />}
+      />
       <div className="w-full grid grid-rows-1 grid-cols-5 gap-x-3 gap-y-3  cursor-pointer">
         {shortVideoData.map((items: TypesThumbnal) => (
-          <MiddleShortCard key={items.id} items={items} />
+          <ShortCard key={items.id} items={items} />
         ))}
       </div>
-
       {/* Breaking news  */}
-      <div className="w-full flex items-center justify-between py-5">
-        <div className="flex flex-col">
-          <h1 className="text-xl">Breaking News</h1>
-          <p className="text-secondary-foreground text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <IoClose className="text-2xl" />
-      </div>
+      <CustomText
+        Text1={"Breaking News"}
+        Text2={" Lorem ipsum dolor sit amet consectetur adipisicing elit."}
+        lIcon={undefined}
+        RIcon={<IoClose className="text-2xl" />}
+      />
       <div className="w-full grid grid-rows-2 grid-cols-4 gap-x-2 gap-y-5 cursor-pointer">
         {brekingNewsdData.map((items: TypesThumbnal) => (
-          <MiddleCard1 key={items.id} items={items} />
+          <MiddleCard key={items.id} items={items} />
         ))}
       </div>
       {/* infinity data */}
@@ -58,7 +53,7 @@ export default function Middlebar() {
       </div>
       <div className="w-full grid grid-rows-2 grid-cols-4 gap-x-2 gap-y-5 cursor-pointer">
         {infinityData.map((items: TypesThumbnal) => (
-          <MiddleCard1 key={items.id} items={items} />
+          <MiddleCard key={items.id} items={items} />
         ))}
       </div>
     </main>
